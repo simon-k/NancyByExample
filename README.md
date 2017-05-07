@@ -1,5 +1,5 @@
 # NancyByExample
-A short demonstration of how NancyFX can be used to create REST APIs
+A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to create a simple REST API, and how it is tested.
 
 ## Why I Like Nancy
 - Easy to use (just start the host and add a module with routes)
@@ -12,6 +12,8 @@ A short demonstration of how NancyFX can be used to create REST APIs
 It's really simple. Create an instance of host with the given url and port where the endpoints should be located, and then start it.
 Endpoints are defined in classes extending NancyModule.
 Use IOC by creating a class extending XXXXX
+
+TODO: ADD CODE EXAMPLES
 
 ## About This Solution
 Just clone it and build it. Tests proves that it works.
