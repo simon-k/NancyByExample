@@ -5,7 +5,7 @@ A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to creat
 
 ## Why I Like Nancy
 - Easy to use (just start the host and add a module with routes)
-- Easy to understand the routes. No magic compared to Web API
+- Easy to understand the routes. No magic compared to Web API or WCF
 - Microservice ready: Lightweight, self-contained and easy to deplay as a service
 - Testable
 - IOC support (Autofac among others)
