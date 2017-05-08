@@ -1,3 +1,5 @@
+![Build status](https://ci.appveyor.com/api/projects/status/github/simon-k/NancyByExample?svg=true&retina=true)
+
 # NancyByExample
 A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to create a simple REST API, and how it is tested.
 
