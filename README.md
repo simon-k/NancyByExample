@@ -48,5 +48,10 @@ The domain objects. For simplicity this is a User which have a name, age and an 
 #### NancyByExample.API.Repository
 A simple repository for storing users. To keep it simple it's just a List. It is bacically just there for demonstrating Autofac IOC Container functionality.
 
+## TODO
+- Make domain lib a model lib
+- Include tests
+- Include a client
+
 ## Notes
 To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
