@@ -1,5 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/kwivphyq94ylakkw?svg=true)](https://ci.appveyor.com/project/SimonKofod/nancybyexample)
-![Test status](http://teststatusbadge.azurewebsites.net/api/status/SimonKofod/nancybyexample)](https://ci.appveyor.com/project/SimonKofod/nancybyexample)
+![Test status](http://teststatusbadge.azurewebsites.net/api/status/SimonKofod/nancybyexample)]
+(https://ci.appveyor.com/project/SimonKofod/nancybyexample)
 
 # NancyByExample
 A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to create a simple REST API, and how it is tested.
