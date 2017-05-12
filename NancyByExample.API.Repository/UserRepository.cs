@@ -39,5 +39,10 @@ namespace NancyByExample.API.Repository
         {
             return _users.Count();
         }
+
+        public bool HasUser(int userId)
+        {
+            return _users.ContainsKey(userId);
+        }
     }
 }

@@ -11,9 +11,10 @@ namespace NancyByExample.API
         {
             var port = 8150;
             var uri = new Uri("http://localhost:" + port);
-            _host = new NancyHost(uri);
 
+            _host = new NancyHost(uri);
             _host.Start();
+
             Console.WriteLine("API is running on " + uri);
             Console.WriteLine("Press [Enter] to close the host.");
             Console.ReadLine();

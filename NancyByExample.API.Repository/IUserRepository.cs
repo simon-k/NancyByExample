@@ -8,5 +8,6 @@ namespace NancyByExample.API.Repository
         int Count();
         User GetUser(int userId);
         void RemoveUser(int userId);
+        bool HasUser(int userId);
     }
 }

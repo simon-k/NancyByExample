@@ -31,17 +31,25 @@ namespace NancyByExample.API.Modules
         public Response GetUser(dynamic parameters)
         {
             var userId = (int) parameters.UserId;
-            var user = _userRepository.GetUser(userId);
-            if (user == null)
+
+            if (!UserExists(userId))
             {
                 return HttpStatusCode.NotFound;
             }
+
+            var user = _userRepository.GetUser(userId);
             return Response.AsJson(user);
         }
 
         public Response DeleteUser(dynamic parameters)
         {
             var userId = (int) parameters.UserId;
+
+            if (!UserExists(userId))
+            {
+                return HttpStatusCode.NotFound;
+            }
+
             _userRepository.RemoveUser(userId);
             return HttpStatusCode.OK;
         }
@@ -52,6 +60,10 @@ namespace NancyByExample.API.Modules
             return Response.AsJson(new {
                 Count = count
             });
+        }
+
+        private bool UserExists(int userId) {
+            return _userRepository.HasUser(userId);
         }
     }
 }
