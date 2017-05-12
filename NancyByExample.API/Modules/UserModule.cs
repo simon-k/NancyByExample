@@ -1,5 +1,5 @@
 ﻿using NancyByExample.API.Repository;
-using NancyByExample.API.Domain;
+using NancyByExample.API.Model;
 using Nancy.ModelBinding;
 using Nancy;
 using System;

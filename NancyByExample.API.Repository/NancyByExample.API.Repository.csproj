@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NancyByExample.API.Domain\NancyByExample.API.Domain.csproj">
+    <ProjectReference Include="..\NancyByExample.API.Domain\NancyByExample.API.Model.csproj">
       <Project>{304211A6-6A82-4BE0-A2B9-A1EC77148F0F}</Project>
-      <Name>NancyByExample.API.Domain</Name>
+      <Name>NancyByExample.API.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

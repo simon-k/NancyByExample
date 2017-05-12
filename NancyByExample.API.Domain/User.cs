@@ -1,4 +1,4 @@
-﻿namespace NancyByExample.API.Domain
+﻿namespace NancyByExample.API.Model
 {
     public class User
     {

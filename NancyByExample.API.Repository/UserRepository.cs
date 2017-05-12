@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NancyByExample.API.Domain;
+using NancyByExample.API.Model;
 
 namespace NancyByExample.API.Repository
 {

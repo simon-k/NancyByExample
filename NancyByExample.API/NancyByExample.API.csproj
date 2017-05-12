@@ -66,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NancyByExample.API.Domain\NancyByExample.API.Domain.csproj">
+    <ProjectReference Include="..\NancyByExample.API.Domain\NancyByExample.API.Model.csproj">
       <Project>{304211A6-6A82-4BE0-A2B9-A1EC77148F0F}</Project>
-      <Name>NancyByExample.API.Domain</Name>
+      <Name>NancyByExample.API.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\NancyByExample.API.Repository\NancyByExample.API.Repository.csproj">
       <Project>{0b3778e5-9fee-4a1b-a2b8-aa09ff868904}</Project>

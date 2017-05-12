@@ -1,4 +1,4 @@
-﻿using NancyByExample.API.Domain;
+﻿using NancyByExample.API.Model;
 
 namespace NancyByExample.API.Repository
 {
