@@ -1,4 +1,5 @@
-![Build status](https://ci.appveyor.com/api/projects/status/github/simon-k/NancyByExample?svg=true&retina=true)
+[![Build status](https://ci.appveyor.com/api/projects/status/kwivphyq94ylakkw?svg=true)](https://ci.appveyor.com/project/SimonKofod/nancybyexample)
+![Test status](http://teststatusbadge.azurewebsites.net/api/status/SimonKofod/nancybyexample)](https://ci.appveyor.com/project/SimonKofod/nancybyexample)
 
 # NancyByExample
 A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to create a simple REST API, and how it is tested.
@@ -28,7 +29,7 @@ Use IOC by creating a class extending XXXXX
 TODO: ADD CODE EXAMPLES
 
 ## About This Solution
-Just clone it and build it. Tests proves that it works.
+Just clone it, build it and run the tests.
 
 ### Dependencies
 This project is dependent on the following nuget packages.
