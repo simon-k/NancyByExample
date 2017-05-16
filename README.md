@@ -23,9 +23,59 @@ _"Adobt! Since we last talked about Nancy on the technology radar it has become 
 ## How Nancy works
 It's really simple. Create an instance of host with the given url and port where the endpoints should be located, and then start it.
 Endpoints are defined in classes extending NancyModule.
-Use IOC by creating a class extending XXXXX
+Use IOC by creating a class extending AutofacNancyBootstrapper
 
-TODO: ADD CODE EXAMPLES
+### Create the host on localhost, port 8500
+```C#
+private NancyHost _host;
+
+public void StartHost()
+{
+    var uri = new Uri("http://localhost:8500");
+    _host = new NancyHost(uri);
+    _host.Start();
+}
+```
+
+### Create endpoint GET http://localhost:8500/user/{id}
+```C#
+public class UserModule : NancyModule
+{
+    public UserModule() : base("user")
+    {
+        Get["/{userId}"] = GetUser;
+    }
+
+    public Response GetUser(dynamic parameters)
+    {
+        var userId = (int) parameters.UserId;
+
+        var user = new User
+        {
+            Id = userId,
+            Name = "Happy Dude",
+        };
+        
+        return Response.AsJson(user);
+    }
+}
+```
+
+Sending the following request
+
+```
+GET http://localhost:8500/user/1234
+```
+
+Would return
+
+```
+HTTP 200 OK
+{
+  "id": 1234
+  "name": "Happy Dude"
+}
+```
 
 ## About This Solution
 Just clone it, build it and run the tests.
