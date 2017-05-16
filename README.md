@@ -78,7 +78,80 @@ HTTP 200 OK
 ```
 
 ## About This Solution
-Just clone it, build it and run the tests.
+Just clone it, build it and run the tests :-)
+
+### Request Examples
+#### Create a user
+
+Request
+```
+PUT localhost:8150/user/123
+Content-Type: application/json
+{
+    "Name": "Ole Hansen",
+    "Age": 22,
+    "Address": {
+        "StreetName": "Tuborgvej",
+        "StreetNumber": "66",
+        "Postcode": "2200",
+        "City": "Copenhagen NV"
+    }
+}
+```
+
+Response
+```
+HTTP 200 OK
+```
+
+#### GET a user
+
+Request
+```
+GET localhost:8150/user/123
+```
+
+Response
+```
+HTTP 200 OK
+{
+    "name": "Ole Hansen",
+    "age": 22,
+    "address": {
+        "streetName": "Tuborgvej",
+        "streetNumber": "66",
+        "postcode": "2200",
+        "city": "Copenhagen NV"
+    }
+}
+```
+
+#### DELETE a user
+Request
+```
+DELETE localhost:8150/user/123
+```
+
+Response
+```
+HTTP 200 OK
+```
+
+
+#### GET user count
+
+Request
+```
+GET localhost:8150/user/count
+```
+
+Response
+```
+HTTP 200 OK
+{
+  "count": 1
+}
+```
 
 ### Dependencies
 This project is dependent on the following nuget packages.
