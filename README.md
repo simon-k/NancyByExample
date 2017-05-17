@@ -186,9 +186,17 @@ The model objects. For simplicity this is a User which have a name, age and an a
 #### NancyByExample.API.Repository
 A simple repository for storing users. To keep it simple it's just a List. It is bacically just there for demonstrating Autofac IOC Container functionality.
 
+## Compared to WCF, Web API and Web API Core
+* WCF is depricated, and rely on SOAP and IIS
+* Web API rely on IIS
+* Web API Core is self contained, but still has some bretty bad routing. Here's an [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api).
+
+
+
 ## TODO
 - Implement equality on model classes to simplify tests
 - Include a client
 
 ## Notes
-To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
+* To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
+* Use RestSharp when creating a client
