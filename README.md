@@ -65,7 +65,7 @@ A simple repository for storing users. To keep it simple it's just a List. It is
 
 ## TODO
 - Implement equality on model classes to simplify tests
-- Include a client
+- Update readme with code examples and differences between WCF, WEB API, WEB API Core (routing, only core) and Nancy (4.x and core)
 
 ## Notes
 To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
