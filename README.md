@@ -13,7 +13,7 @@ A short demonstration of how [NancyFX](http://nancyfx.org/) can be used to creat
 Here are some quotes from the famous guys:
 
 Scott Hanselman<br/>
-_"Nancy is a very complete and sophisticated framework with a LOT of great code to explore. It's extremely modular and flexible. It works with ASP.NET, with WCF, on Azure, with Owin, alongside Umbraco, with Mono, and so much more. I'm looking forward to exploring their .NET Core version as it continues development."_
+_"Nancy is a very complete and sophisticated framework with a LOT of great code to explore. It's extremely modular and flexible."_
 [Link](https://www.hanselman.com/blog/ExploringAMinimalWebAPIWithNETCoreAndNancyFX.aspx)
 
 Technology Radar by ThoughtWorks (Martin Fowler)<br/>
