@@ -189,13 +189,11 @@ A simple repository for storing users. To keep it simple it's just a List. It is
 ## Compared to WCF, Web API and Web API Core
 * WCF is depricated, and rely on SOAP and IIS
 * Web API rely on IIS
-* Web API Core is self contained, but still has some bretty bad routing. Here's an [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api).
-
-
+* Web API Core is self contained, but still has some bretty bad routing. It only runs in Core. Here's an [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api).
+* Nancy is self contained. Has explicit routing, runs on both core and .NET 4.X
 
 ## TODO
 - Implement equality on model classes to simplify tests
-- Update readme with code examples and differences between WCF, WEB API, WEB API Core (routing, only core) and Nancy (4.x and core)
 
 ## Notes
 * To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
