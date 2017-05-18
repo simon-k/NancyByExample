@@ -35,11 +35,10 @@ namespace NancyByExample.API.Tests.Modules
             var expectedUserId = _fixture.Create<int>();
             var expectedUser = _fixture.Create<User>();
 
-            var response = _browser.Put(string.Format("/user/{0}", expectedUserId), with => with.JsonBody(expectedUser));
+            var response = _browser.Put($"/user/{expectedUserId}", with => with.JsonBody(expectedUser));
 
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            //TODO: Implement equality on model classes
-            _repository.Received(1).AddUser(Arg.Is<int>(userId => userId == expectedUserId), Arg.Is<User>(user => user.Name == expectedUser.Name));
+            _repository.Received(1).AddUser(Arg.Is(expectedUserId), Arg.Is(expectedUser));
         }
 
         [Fact]
@@ -50,11 +49,10 @@ namespace NancyByExample.API.Tests.Modules
             _repository.HasUser(Arg.Is<int>(userId => userId == expectedUserId)).Returns(true);
             _repository.GetUser(Arg.Is<int>(userId => userId == expectedUserId)).Returns(expectedUser);
 
-            var response = _browser.Get(string.Format("/user/{0}", expectedUserId));
+            var response = _browser.Get($"/user/{expectedUserId}");
             var actualUser = response.Body.DeserializeJson<User>();
 
-            //TODO: Implement equality on model classes
-            actualUser.Name.Should().Be(expectedUser.Name);
+            actualUser.Should().Be(expectedUser);
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
@@ -64,7 +62,7 @@ namespace NancyByExample.API.Tests.Modules
             var expectedUserId = _fixture.Create<int>();
             _repository.HasUser(Arg.Is<int>(userId => userId == expectedUserId)).Returns(false);
 
-            var response = _browser.Delete(string.Format("/user/{0}", expectedUserId));
+            var response = _browser.Delete($"/user/{expectedUserId}");
 
             response.StatusCode.Should().Be(HttpStatusCode.NotFound);
         }
@@ -75,10 +73,10 @@ namespace NancyByExample.API.Tests.Modules
             var expectedUserId = _fixture.Create<int>();
             _repository.HasUser(Arg.Is<int>(userId => userId == expectedUserId)).Returns(true);
 
-            var response = _browser.Delete(string.Format("/user/{0}", expectedUserId));
+            var response = _browser.Delete($"/user/{expectedUserId}");
 
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            _repository.Received(1).RemoveUser(Arg.Is<int>(userId => userId == expectedUserId));
+            _repository.Received(1).RemoveUser(Arg.Is(expectedUserId));
         }
 
         [Fact]
@@ -87,7 +85,7 @@ namespace NancyByExample.API.Tests.Modules
             var expectedUserId = _fixture.Create<int>();
             _repository.HasUser(Arg.Is<int>(userId => userId == expectedUserId)).Returns(false);
 
-            var response = _browser.Delete(string.Format("/user/{0}", expectedUserId));
+            var response = _browser.Delete($"/user/{expectedUserId}");
 
             response.StatusCode.Should().Be(HttpStatusCode.NotFound);
         }
@@ -98,7 +96,7 @@ namespace NancyByExample.API.Tests.Modules
             var expectedUserCount = _fixture.Create<int>();
             _repository.Count().Returns(expectedUserCount);
 
-            var response = _browser.Get(string.Format("/user/count"));
+            var response = _browser.Get("/user/count");
             var actualUserCount = (int)response.Body.DeserializeJson<dynamic>()["Count"];
 
             actualUserCount.Should().Be(expectedUserCount);

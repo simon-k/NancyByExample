@@ -192,9 +192,6 @@ A simple repository for storing users. To keep it simple it's just a List. It is
 * Web API Core is self contained, but still has some bretty bad routing. It only runs in Core. Here's an [example](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api).
 * Nancy is self contained. Has explicit routing, runs on both core and .NET 4.X
 
-## TODO
-- Implement equality on model classes to simplify tests
-
 ## Notes
 * To run an api as a windows service I would reccommend using Topshelf (http://topshelf-project.com/).
 * Use RestSharp when creating a client
